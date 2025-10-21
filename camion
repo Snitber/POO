@@ -1,0 +1,23 @@
+public class Camion extends Vehiculo {
+    private double capacidadCarga; // en toneladas
+
+    public Camion(String marca, String modelo, double capacidadCarga) {
+        super(marca, modelo);
+        this.capacidadCarga = capacidadCarga;
+    }
+
+    public void cargarMercancia() {
+        System.out.println("Cargando " + capacidadCarga + " toneladas de mercancía.");
+    }
+}
+public class Principal {
+    public static void main(String[] args) {
+     Camion camion = new Camion("Volvo", "FH16", 18);
+
+        camion.acelerar(40);
+
+        camion.cargarMercancia();
+
+        camion.frenar();
+    }
+}
